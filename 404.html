@@ -183,6 +183,7 @@
         });
   
         // check if logged in
+        hideActionBar();
         getUserDetails();
         
   
@@ -242,7 +243,7 @@
           vbody.addEventListener("blur", updateValues);
 
           // Show action bar
-          actionbar.classList.remove("hidden");
+          showActionBar();
         }
 
         else{
