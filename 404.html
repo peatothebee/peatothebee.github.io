@@ -42,15 +42,6 @@
   </header>
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      <div class="logincontainer">
-        <div id="containerOfUser" class="usercontainer displaynone">
-          <img class="userphoto" src="" id="photoOfUser">
-          <div class="vertical">
-            <div class="username" id="nameOfUser">no name</div>
-            <div class="userstatus">Edit access</div>
-        </div>
-        </div>
-      </div>
       <div id="pageLoadAnim" class="loader">
       </div>
       <article id="pageContent" class="post h-entry displaynone" itemscope itemtype="http://schema.org/BlogPosting">
@@ -188,8 +179,6 @@
        // Stop showing loader and show content
           document.getElementById("pageLoadAnim").style.display = 'none';
           document.getElementById("pageContent").classList.remove('displaynone');
-          
-  
         });
   
         // check if logged in
@@ -288,50 +277,15 @@
         </div>
         <div class="footer-col one-half">
           <h2 class="footer-heading"></h2>
-          <button class="loginbutton" type="button" id="logmein">Log in with Google</button>
-          <div class="social-links">
-            <ul class="social-media-list">
-              <li>
-                <a href="https://dribbble.com/gyanl" title="gyanl">
-                  <svg class="svg-icon grey">
-                    <use xlink:href="/assets/minima-social-icons.svg#dribbble">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/gyanl" title="gyanl">
-                  <svg class="svg-icon grey">
-                    <use xlink:href="/assets/minima-social-icons.svg#github">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/gyanl" title="gyanl">
-                  <svg class="svg-icon grey">
-                    <use xlink:href="/assets/minima-social-icons.svg#instagram">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/gyanlakhwani" title="gyanlakhwani">
-                  <svg class="svg-icon grey">
-                    <use xlink:href="/assets/minima-social-icons.svg#linkedin">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/gyanl" title="gyanl">
-                  <svg class="svg-icon grey">
-                    <use xlink:href="/assets/minima-social-icons.svg#twitter">
-                    </use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <button class="loginbutton" type="button" id="logmein">Log in and Edit</button>
+          <div class="logincontainer">
+            <div id="containerOfUser" class="usercontainer displaynone">
+              <img class="userphoto" src="" id="photoOfUser">
+              <div class="vertical">
+                <div class="username" id="nameOfUser">no name</div>
+                <div class="userstatus" id="statusOfUser">Edit access</div>
+            </div>
+            </div>
           </div>
         </div>
       </div>

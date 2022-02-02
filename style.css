@@ -373,7 +373,7 @@ h5 a:hover{
 }
 
 .vertical{
-  padding-left:12px
+  padding-left:12px;
   display: flex;
   flex-direction: column;
 }
