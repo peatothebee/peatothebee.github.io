@@ -25,6 +25,8 @@ html{
   }
 }
 
+
+
 blockquote,body,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{
   margin:0;
   padding:0
@@ -351,6 +353,18 @@ h5 a:hover{
   .post-content h6 strong{
       color:var(--text-color-dark)
   }
+}
+
+.loginbutton{
+
+font-weight: 500;
+font-size: 16px;
+text-align: center;
+padding: 10px 20px;
+border-radius: 40px;
+background-color:var(--overlay-color);
+border: 1px solid var(--overlay-edge-color);
+color:var(--text-color-dark);
 }
 
 .usercontainer{
