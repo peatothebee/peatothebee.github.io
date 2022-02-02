@@ -47,9 +47,9 @@
       <article id="pageContent" class="post h-entry displaynone" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
           <h1 id="title" class="post-title p-name" itemprop="name headline">
-            <span id="htmlTitle" onclick="this.contentEditable = 'true';" contenteditable="true">Loading...</span>
+            <span id="htmlTitle" >Loading...</span>
           </h1>
-          <div id="htmlSubtitle" onclick="this.contentEditable = 'true';" contenteditable="true" class="sub-title">It should work if you give it a second.</div>
+          <div id="htmlSubtitle" class="sub-title">It should work if you give it a second.</div>
         </header>
         <div id="htmlBody" class="post-content e-content" itemprop="articleBody">
         </div>
@@ -148,6 +148,7 @@
   
       var vdisplayname = "";
       var vphotourl = "";
+      var vemail = "";
   
       var actionbar = document.getElementsByClassName("pell-actionbar")[0];
       hideActionBar();
@@ -211,10 +212,39 @@
       }
   
       function showUserOnPage() {
+        // Show user chip
         document.getElementById('containerOfUser').classList.remove('displaynone');
         document.getElementById('photoOfUser').src = vphotourl;
         document.getElementById('nameOfUser').innerHTML = vdisplayname;
+        // Hide login button
         vlogin.classList.add('displaynone');
+
+        if (vemail == "gyanlakhwani@gmail.com"){
+          //User can edit, show edit access
+          document.getElementById('statusOfUser').innerHTML = "Edit Access";
+          
+          // Make title or subtitle editable on click
+          vtitle.addEventListener("click", function() {
+            vtitle.contentEditable = "true");
+          });
+
+          vsubtitle.addEventListener("click", function() {
+            vsubtitle.contentEditable = "true");
+          });
+
+          // Add event listeners for update values
+          vtitle.addEventListener("blur", updateValues);
+          vsubtitle.addEventListener("blur", updateValues);
+          vbody.addEventListener("blur", updateValues);
+
+          // Show action bar
+          showActionBar();
+        }
+
+        else{
+          //User read only, show read only access
+          document.getElementById('statusOfUser').innerHTML = "Read Access";
+        }
       }
   
       function getUserDetails() {
@@ -236,6 +266,7 @@
       console.log("i think you are " + user.displayName);
       vdisplayname = user.displayName;
       vphotourl = user.photoURL;
+      vemail = user.email;
       showUserOnPage();
       
     }).catch((error) => {
@@ -250,13 +281,9 @@
     });
   
       }
-  
+
+
       // Add event listeners
-  
-      vtitle.addEventListener("blur", updateValues);
-      vsubtitle.addEventListener("blur", updateValues);
-      vbody.addEventListener("blur", updateValues);
-      vbody.addEventListener("focus", showActionBar);
       vlogin.addEventListener("click", signInUser);
       </script>
     </div>
