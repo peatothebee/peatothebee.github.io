@@ -101,11 +101,13 @@
       var vdisplayname = "";
       var vphotourl = "";
       var numposts = 0;
-  
+
+
+
       // One time run
         onValue(reference, (snapshot) => {
 
-          snapshot.forEach(postSnapshot) => {
+          snapshot.forEach((postSnapshot) => {
             const postKey = postSnapshot.key;
             const postData = postSnapshot.val();
 
@@ -121,15 +123,15 @@
               "</div>"
 
           document.getElementById('htmlBody').innerHTML += thisCode;
-
-
-          }
+          });
   
        // Stop showing loader and show content
           document.getElementById("pageLoadAnim").style.display = 'none';
           document.getElementById("pageContent").classList.remove('displaynone');
   
         });
+
+
   
         // check if logged in
         getUserDetails();
@@ -150,6 +152,7 @@
         console.log("Trying to get user details...");
   
         const auth = getAuth();
+
   getRedirectResult(auth)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -186,7 +189,7 @@
       </script>
     </div>
   </main>
-s
+
 
   <footer class="site-footer h-card">
     <data class="u-url" href="/">
