@@ -372,6 +372,12 @@ h5 a:hover{
   transform: translateY(-2px);
 }
 
+.vertical{
+  padding-left:12px
+  display: flex;
+  flex-direction: column;
+}
+
 .usercontainer{
   display:flex;
   width:fit-content;
@@ -385,8 +391,13 @@ h5 a:hover{
   display:none
 }
 .username{
-  padding-left:12px
+
 }
+
+.userstatus{
+
+}
+
 .userphoto{
   width:36px;
   height:36px;
