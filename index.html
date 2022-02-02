@@ -106,6 +106,9 @@
         onValue(reference, (snapshot) => {
 
           var posts = snapshot.val();
+
+          console.log(posts);
+
           numposts = posts.length;
 
           console.log("There are " + numposts + "posts" );
