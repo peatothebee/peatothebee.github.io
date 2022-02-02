@@ -55,9 +55,60 @@
         </div>
       </article>
       <script src="https://gyanl.com/assets/pell.js"></script>
+      <script type="text/javascript">
+    
 
+        // Initialize pell on an HTMLElement
+    pell.init({
+      // <HTMLElement>, required
+      element: document.getElementById('htmlBody'),
+  
+      // <Function>, required
+      // Use the output html, triggered by element's `oninput` event
+      onChange: html => console.log(html),
+  
+      // <string>, optional, default = 'div'
+      // Instructs the editor which element to inject via the return key
+      defaultParagraphSeparator: 'p',
+  
+      // <boolean>, optional, default = false
+      // Outputs <span style="font-weight: bold;"></span> instead of <b></b>
+      styleWithCSS: false,
+  
+      // <Array[string | Object]>, string if overwriting, object if customizing/creating
+      // action.name<string> (only required if overwriting)
+      // action.icon<string> (optional if overwriting, required if custom action)
+      // action.title<string> (optional)
+      // action.result<Function> (required)
+      // Specify the actions you specifically want (in order)
+      actions: [
+        'bold',
+        'italic',
+        'underline',
+        'heading1',
+        'heading2',
+        'heading3',
+        'heading4',
+        'paragraph',
+        'olist',
+        'ulist',
+        'todo'
+      ],
+  
+      // classes<Array[string]> (optional)
+      // Choose your custom class names
+      classes: {
+        actionbar: 'pell-actionbar',
+        button: 'pell-button',
+        content: 'pell-content',
+        selected: 'pell-button-selected'
+      }
+    })
+  
+      </script>
       <script type="module">
-      
+      hideActionBar();
+
       // Get pageName = gyanl.com/string
       var pageName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
       console.log(pageName);
@@ -153,6 +204,10 @@
           vbody.style.opacity = "1.0";
       }
   
+      function hideActionBar() {
+        actionbar.classList.add("hidden");
+    }
+
       function signInUser() {
         console.log("Trying to sign in...")
         signInWithRedirect(auth, provider);
@@ -194,60 +249,6 @@
           document.getElementById('statusOfUser').innerHTML = "Read Access";
         }
       }
-  
-
-      function startPell() {
-
-      // Initialize pell on an HTMLElement
-      pell.init({
-      // <HTMLElement>, required
-      element: document.getElementById('htmlBody'),
-  
-      // <Function>, required
-      // Use the output html, triggered by element's `oninput` event
-      onChange: html => console.log(html),
-  
-      // <string>, optional, default = 'div'
-      // Instructs the editor which element to inject via the return key
-      defaultParagraphSeparator: 'p',
-  
-      // <boolean>, optional, default = false
-      // Outputs <span style="font-weight: bold;"></span> instead of <b></b>
-      styleWithCSS: false,
-  
-      // <Array[string | Object]>, string if overwriting, object if customizing/creating
-      // action.name<string> (only required if overwriting)
-      // action.icon<string> (optional if overwriting, required if custom action)
-      // action.title<string> (optional)
-      // action.result<Function> (required)
-      // Specify the actions you specifically want (in order)
-      actions: [
-        'bold',
-        'italic',
-        'underline',
-        'heading1',
-        'heading2',
-        'heading3',
-        'heading4',
-        'paragraph',
-        'olist',
-        'ulist',
-        'todo'
-      ],
-  
-      // classes<Array[string]> (optional)
-      // Choose your custom class names
-      classes: {
-        actionbar: 'pell-actionbar',
-        button: 'pell-button',
-        content: 'pell-content',
-        selected: 'pell-button-selected'
-      }
-    })
-
-      }
-
-
 
       function getUserDetails() {
         console.log("Trying to get user details...");
