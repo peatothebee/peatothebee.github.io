@@ -4,8 +4,8 @@ html{
   --text-color-dark: #052840;
   --text-color: #02395E;
   --text-color-light: #999;
-  --accent-color-dark: #000D87;
-  --accent-color: #0016D8;
+  --accent-color-dark: #245E85;
+  --accent-color: #146EA9;
   --accent-color-light: rgb(0 22 216 / 10%);
   --overlay-color: rgba(255, 255, 255, .8);
   --overlay-edge-color: rgba(0, 0, 0, .08)
@@ -82,11 +82,9 @@ a:visited.tag{
 }
 .sub-title{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-  font-style:italic;
-  font-weight:300;
   font-size:20px;
-  color:var(--text-color-light);
-  padding-bottom:8px
+  color:var(--text-color);
+  padding: 8px 0px;
 }
 main{
   display:block;
@@ -182,6 +180,7 @@ pre>code{
   padding-left:0
 }
 .wrapper{
+  z-index: 2;
   max-width:720px;
   margin-right:auto;
   margin-left:auto;
@@ -449,6 +448,12 @@ h5 a:hover{
   text-align:center;
   color:var(--text-color-light)
 }
+
+.footer-img{
+  margin-top: -100px;
+  z-index: -1;
+}
+
 .mobile-only{
   display:none
 }
