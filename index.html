@@ -105,31 +105,25 @@
       // One time run
         onValue(reference, (snapshot) => {
 
-          var posts = snapshot.val();
+          snapshot.forEach(postSnapshot) => {
+            const postKey = postSnapshot.key;
+            const postData = postSnapshot.val();
 
-          console.log(posts);
-          console.log(posts[0]);
-          console.log(posts[0].body);
-
-          numposts = posts.length;
-
-          console.log("There are " + numposts + " posts" );
-
-          for (var i = posts.length - 1; i > -1; i--) {
-
-          var thisCode = "<a href='post.html?" +
-              i +
+            var thisCode = "<a href='post.html?" +
               "'><div class='home-post-container'><div class='claim spaced'>" +
               "thisSummary" +
               "</div><div class='reported'> Reported " +
-              posts[i].body +
+                postData.body +
               " times since " +
-              posts[i].subtitle +
+              postData.subtitle +
               ".</div><p class='limited'>" +
-              posts[i].title +
+                postData.title +
               "</div>"
 
           document.getElementById('htmlBody').innerHTML += thisCode;
+
+
+          }
 }
   
        // Stop showing loader and show content
