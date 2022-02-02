@@ -104,7 +104,6 @@
       var numposts = 0;
 
 
-
       // One time run
         onValue(reference, (snapshot) => {
 
@@ -112,13 +111,20 @@
             const postKey = postSnapshot.key;
             const postData = postSnapshot.val();
 
-            var thisCode = "<div class='post-container'>" +
+            var thisCode = "<div class='post-container animated fadeInUp'>" +
               "<h3 class='post-title'>" + "<a href='/" + postKey + "'>" + postData.title + "</a></h3>" +
               "<p class='post-subtitle'>" + postData.subtitle + "</p>" +
               "</div>";
 
           document.getElementById('htmlBody').innerHTML += thisCode;
+          numposts++;
           });
+
+          const collection = document.getElementsByClassName("post-container");
+          for (let i = 0; i < collection.length; i++) {
+            collection[i].style.animationDelay = ( i * 30 ) + 'ms';
+          }
+
   
         });
 
@@ -174,9 +180,6 @@
   
       }
   
-      // Add event listeners
-
-      vlogin.addEventListener("click", signInUser);
       </script>
     </div>
   </main>
