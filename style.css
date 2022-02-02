@@ -365,6 +365,7 @@ h5 a:hover{
   color:var(--text-color-dark);
   opacity: .7;
   transition: .2s;
+  margin-left: -4px;
 }
 
 .loginbutton:hover{
