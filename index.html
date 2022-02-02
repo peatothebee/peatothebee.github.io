@@ -111,16 +111,10 @@
             const postKey = postSnapshot.key;
             const postData = postSnapshot.val();
 
-            var thisCode = "<a href='post.html?" +
-              "'><div class='home-post-container'><div class='claim spaced'>" +
-              "thisSummary" +
-              "</div><div class='reported'> Reported " +
-                postData.body +
-              " times since " +
-              postData.subtitle +
-              ".</div><p class='limited'>" +
-                postData.title +
-              "</div>"
+            var thisCode = "<div class='post-container'>" +
+              "<h3 class='post-title'>" + postData.title + "</h3>"
+              "<p class='post-subtitle'>" + postData.subtitle + "</p>" +
+              "</div>";
 
           document.getElementById('htmlBody').innerHTML += thisCode;
           });
