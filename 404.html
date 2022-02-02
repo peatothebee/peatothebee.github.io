@@ -222,11 +222,11 @@
         // Hide login button
         vlogin.classList.add('displaynone');
 
-        if (vemail == "gyanlakhwani@gmail.com"){
+        if (vemail == "pbanerjee25@gmail.com"){
           //User can edit, show edit access
           document.getElementById('statusOfUser').innerHTML = "Edit Access";
           
-          // Make title or subtitle editable on click
+          // Make text areas editable
           vtitle.addEventListener("click", function() {
             vtitle.contentEditable = "true";
           });
@@ -234,6 +234,8 @@
           vsubtitle.addEventListener("click", function() {
             vsubtitle.contentEditable = "true";
           });
+
+          vbody.contentEditable = "true";
 
           // Add event listeners for update values
           vtitle.addEventListener("blur", updateValues);
