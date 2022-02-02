@@ -39,8 +39,7 @@
           <div id="htmlSubtitle" onclick="this.contentEditable = 'true';" contenteditable="true" class="sub-title">Hello! My name is Priyanka. I am a Strategy and Operations Lead at Google, and also a chilli oil enthusiast.
             <p>I write about personal finance, cats and Formula one.</div>
         </header>
-        <div id="htmlBody" class="post-content e-content" itemprop="articleBody"> default
-        </div>
+        <div id="htmlBody" class="post-content e-content" itemprop="articleBody"></div>
       </article>
       
       <script type="module">
@@ -93,7 +92,7 @@
             const postData = postSnapshot.val();
 
             var thisCode = "<div class='post-container'>" +
-              "<h3 class='post-title'>" + "<a href='/" + postKey + "'>" + postData.title + "</a></h3>"
+              "<h3 class='post-title'>" + "<a href='/" + postKey + "'>" + postData.title + "</a></h3>" +
               "<p class='post-subtitle'>" + postData.subtitle + "</p>" +
               "</div>";
 
