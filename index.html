@@ -108,10 +108,12 @@
           var posts = snapshot.val();
 
           console.log(posts);
+          console.log(posts[0]);
+          console.log(posts[0].body);
 
           numposts = posts.length;
 
-          console.log("There are " + numposts + "posts" );
+          console.log("There are " + numposts + " posts" );
 
           for (var i = posts.length - 1; i > -1; i--) {
 
@@ -138,18 +140,6 @@
   
         // check if logged in
         getUserDetails();
-  
-      function updateValues() {
-        const updates = {};
-        updates[pageName + "/"] = {
-          title: vtitle.innerHTML,
-          subtitle: vsubtitle.innerHTML,
-          body: vbody.innerHTML
-        };
-        update(ref(db), updates);
-        console.log("Update sent");
-      }
-
   
       function signInUser() {
         console.log("Trying to sign in...")
@@ -203,24 +193,7 @@
       </script>
     </div>
   </main>
-  <div class="tabswitcher mobile-only">
-    <a class="tab" href="https://gyanl.com">
-      <img id="tabimg1" class="tab-img" src="https://gyanl.com/assets/work.png">
-      <p class="tab-text">Home</p>
-    </a>
-    <a class="tab" href="https://gyanl.com/about">
-      <img id="tabimg2" class="tab-img tab-img-inactive" src="https://gyanl.com/assets/about.png">
-      <p class="tab-text">About</p>
-    </a>
-    <a class="tab" href="https://gyanl.com/writing">
-      <img id="tabimg3" class="tab-img tab-img-inactive" src="https://gyanl.com/assets/writing.png">
-      <p class="tab-text">Writing</p>
-    </a>
-    <a class="tab" href="https://gyanl.com/now">
-      <img id="tabimg4" class="tab-img tab-img-inactive" src="https://gyanl.com/assets/now.png">
-      <p class="tab-text">Now</p>
-    </a>
-  </div>
+s
 
   <footer class="site-footer h-card">
     <data class="u-url" href="/">
