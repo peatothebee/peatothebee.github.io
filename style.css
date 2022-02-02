@@ -923,6 +923,7 @@ h5 a:hover{
   border-right:none
 }
 .pell-actionbar{
+  background:var(--overlay-color);
   border:1px solid #eee;
   width:fit-content;
   border-radius:4px;
