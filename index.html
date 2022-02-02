@@ -95,9 +95,6 @@
   
       const reference = ref(db, 'posts/');
 
-      var vtitle = document.getElementById('htmlTitle');
-      var vsubtitle = document.getElementById('htmlSubtitle');
-      var vbody = document.getElementsByClassName("pell-content")[0];
       var vlogin = document.getElementById("logmein");
   
       var vdisplayname = "";
@@ -112,41 +109,20 @@
 
           for (var i = posts.length - 1; i > -1; i--) {
 
-var thisCode = "<a href='post.html?" +
-    i +
-    "'><div class='home-post-container'><div class='claim spaced'>" +
-    "thisSummary" +
-    "</div><div class='reported'> Reported " +
-    posts[i].body +
-    " times since " +
-    posts[i].subtitle +
-    ".</div><p class='limited'>" +
-    posts[i].title +
-    "</div>"
+          var thisCode = "<a href='post.html?" +
+              i +
+              "'><div class='home-post-container'><div class='claim spaced'>" +
+              "thisSummary" +
+              "</div><div class='reported'> Reported " +
+              posts[i].body +
+              " times since " +
+              posts[i].subtitle +
+              ".</div><p class='limited'>" +
+              posts[i].title +
+              "</div>"
 
-document.getElementById('htmlBody').innerHTML += thisCode;
+          document.getElementById('htmlBody').innerHTML += thisCode;
 }
-  
-      // // If snapshot exists, get the values and populate the page.
-      //     if (snapshot.exists()) {
-      //       console.log(snapshot.val());
-      //       vtitle.innerHTML = snapshot.val().title;
-      //       vsubtitle.innerHTML = snapshot.val().subtitle;
-      //       vbody.innerHTML = snapshot.val().body;
-      //     } else {
-      //     // If no snapshot, fill values and create record.
-      //       console.log("Creating new record.");
-      //       vtitle.innerHTML = pageName;
-      //       vbody.innerHTML = "Write something epic.<br><br><br><br><br><br><br>";
-      //       vbody.style.opacity = "0.5";
-  
-      // // Create new log
-      //       set(ref(db, pageName + "/"), {
-      //         title: vtitle.innerHTML,
-      //         subtitle: vsubtitle.innerHTML,
-      //         body : vbody.innerHTML
-      //       });
-      //     }
   
        // Stop showing loader and show content
           document.getElementById("pageLoadAnim").style.display = 'none';
@@ -217,10 +193,7 @@ document.getElementById('htmlBody').innerHTML += thisCode;
       }
   
       // Add event listeners
-  
-      // vtitle.addEventListener("blur", updateValues);
-      // vsubtitle.addEventListener("blur", updateValues);
-      // vbody.addEventListener("blur", updateValues);
+
       vlogin.addEventListener("click", signInUser);
       </script>
     </div>
