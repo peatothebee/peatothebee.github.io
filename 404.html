@@ -107,7 +107,6 @@
   
       </script>
       <script type="module">
-      hideActionBar();
 
       // Get pageName = gyanl.com/string
       var pageName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
@@ -181,6 +180,7 @@
           }
   
        // Stop showing loader and show content
+          hideActionBar();
           document.getElementById("pageLoadAnim").style.display = 'none';
           document.getElementById("pageContent").classList.remove('displaynone');
         });
