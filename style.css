@@ -1,3 +1,30 @@
+html{
+  --background-color: #E1ECF3;
+  --foreground-color: #000000;
+  --text-color-dark: #052840;
+  --text-color: #02395E;
+  --text-color-light: #999;
+  --accent-color-dark: #000D87;
+  --accent-color: #0016D8;
+  --accent-color-light: rgb(0 22 216 / 10%);
+  --overlay-color: rgba(255, 255, 255, .8);
+  --overlay-edge-color: rgba(0, 0, 0, .08)
+}
+@media (prefers-color-scheme: dark){
+  html{
+      --background-color: #0c0b1c;
+      --foreground-color: rgba(0, 0, 0, 0.3);
+      --text-color-dark: rgba(255, 255, 255, 1);
+      --text-color: rgba(255, 255, 255, .85);
+      --text-color-light: rgba(255, 255, 255, .7);
+      --accent-color-dark: #b91d1d;
+      --accent-color: #ff4343;
+      --accent-color-light: #ff78781a;
+      --overlay-color: rgba(0, 0, 0, .2);
+      --overlay-edge-color: rgba(255, 255, 255, .2)
+  }
+}
+
 blockquote,body,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{
   margin:0;
   padding:0
@@ -325,32 +352,7 @@ h5 a:hover{
       color:var(--text-color-dark)
   }
 }
-html{
-  --background-color: #ffffff;
-  --foreground-color: #000000;
-  --text-color-dark: #000;
-  --text-color: #555;
-  --text-color-light: #999;
-  --accent-color-dark: #000D87;
-  --accent-color: #0016D8;
-  --accent-color-light: rgb(0 22 216 / 10%);
-  --overlay-color: rgba(255, 255, 255, .8);
-  --overlay-edge-color: rgba(0, 0, 0, .08)
-}
-@media (prefers-color-scheme: dark){
-  html{
-      --background-color: #0c0b1c;
-      --foreground-color: rgba(0, 0, 0, 0.3);
-      --text-color-dark: rgba(255, 255, 255, 1);
-      --text-color: rgba(255, 255, 255, .85);
-      --text-color-light: rgba(255, 255, 255, .7);
-      --accent-color-dark: #b91d1d;
-      --accent-color: #ff4343;
-      --accent-color-light: #ff78781a;
-      --overlay-color: rgba(0, 0, 0, .2);
-      --overlay-edge-color: rgba(255, 255, 255, .2)
-  }
-}
+
 .usercontainer{
   display:flex;
   width:fit-content;
