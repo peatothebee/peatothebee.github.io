@@ -383,7 +383,8 @@ h5 a:hover{
   width:fit-content;
   flex-direction:row;
   align-items:center;
-  border:1px solid #ddd;
+  background-color:var(--overlay-color);
+  border: 1px solid var(--overlay-edge-color);
   border-radius:36px;
   padding:6px 20px 6px 6px
 }
@@ -395,7 +396,9 @@ h5 a:hover{
 }
 
 .userstatus{
-
+  font-size: 12px;
+  font-weight: 500;
+  color:var(--accent-color-dark); 
 }
 
 .userphoto{
