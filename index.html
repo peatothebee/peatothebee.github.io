@@ -39,6 +39,28 @@
           <div id="htmlSubtitle" onclick="this.contentEditable = 'true';" contenteditable="true" class="sub-title">
             <p>Hello! My name is Priyanka. I am a Strategy and Operations Lead at Google, and also a chilli oil enthusiast.</p>
             <p>I write about personal finance, cats and Formula one.</p>
+
+            <div class="social-links">
+              <ul class="social-media-list">
+                <li>
+                  <a href="https://www.linkedin.com/in/priyankaabanerjee" title="priyankaabanerjee">
+                    <svg class="svg-icon grey">
+                      <use xlink:href="/assets/minima-social-icons.svg#linkedin">
+                      </use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/PeaToTheBee" title="PeaToTheBee">
+                    <svg class="svg-icon grey">
+                      <use xlink:href="/assets/minima-social-icons.svg#twitter">
+                      </use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </header>
         <div id="htmlBody" class="post-content e-content" itemprop="articleBody"></div>
@@ -77,8 +99,6 @@
       const user = auth.currentUser;
   
       const reference = ref(db, 'posts');
-
-      var vlogin = document.getElementById("logmein");
   
       var vdisplayname = "";
       var vphotourl = "";
@@ -167,6 +187,26 @@
   </main>
 
 <img class="footer-img mobile-only" src="assets/priyanka-footer.jpg" alt="">
+
+<footer class="site-footer h-card">
+  <data class="u-url" href="/">
+  </data>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+        <h2 class="footer-heading">Priyanka Banerjee</h2>
+        <ul class="contact-list">
+          <p>Made with love in New Delhi, India</p>
+          <!-- <li class="p-name">Priyanka Banerjee</li><li><a class="u-email" href="mailto:hello@gyanl.com">hello@gyanl.com</a></li>-->
+        </ul>
+      </div>
+      <div class="footer-col one-half">
+        <h2 class="footer-heading"></h2>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>
