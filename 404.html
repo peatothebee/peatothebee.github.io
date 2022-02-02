@@ -152,7 +152,6 @@
       var vemail = "";
   
       var actionbar = document.getElementsByClassName("pell-actionbar")[0];
-      hideActionBar();
       
       // One time run
         onValue(reference, (snapshot) => {
@@ -240,7 +239,6 @@
           vbody.addEventListener("blur", updateValues);
 
           // Show action bar
-          startPell();
           actionbar.classList.remove("hidden");
         }
 
