@@ -93,7 +93,7 @@
             const postData = postSnapshot.val();
 
             var thisCode = "<div class='post-container'>" +
-              "<h3 class='post-title'>" + postData.title + "</h3>"
+              "<h3 class='post-title'>" + "<a href='/" + postKey + "'>" + postData.title + "</a></h3>"
               "<p class='post-subtitle'>" + postData.subtitle + "</p>" +
               "</div>";
 
