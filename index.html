@@ -102,9 +102,7 @@
   
       var vdisplayname = "";
       var vphotourl = "";
-  
-      var actionbar = document.getElementsByClassName("pell-actionbar")[0];
-      hideActionBar();
+
   
       // One time run
         onValue(reference, (snapshot) => {
@@ -149,17 +147,8 @@
         };
         update(ref(db), updates);
         console.log("Update sent");
-        hideActionBar();
       }
-  
-      function showActionBar() {
-          actionbar.classList.remove("hidden");
-          vbody.style.opacity = "1.0";
-      }
-  
-      function hideActionBar() {
-          actionbar.classList.add("hidden");
-      }
+
   
       function signInUser() {
         console.log("Trying to sign in...")
@@ -212,7 +201,6 @@
       vtitle.addEventListener("blur", updateValues);
       vsubtitle.addEventListener("blur", updateValues);
       vbody.addEventListener("blur", updateValues);
-      vbody.addEventListener("focus", showActionBar);
       vlogin.addEventListener("click", signInUser);
       </script>
     </div>
