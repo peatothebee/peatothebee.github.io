@@ -706,7 +706,7 @@ h5 a:hover{
 }
 .social-media-list{
   display:table;
-  margin:0
+  margin:0 0 0 -4px;
 }
 .social-media-list li{
   float:left;
@@ -723,11 +723,12 @@ h5 a:hover{
   padding:4px 0 0 4px
 }
 .social-media-list li .svg-icon{
-  fill:var(--accent-color)
+  fill:var(--accent-color);
+  background-color: var(--overlay-color);
 }
 .social-media-list li:hover .svg-icon{
   fill:var(--accent-color);
-  background-color:var(--accent-color-light)
+  background-color: var(--accent-color-light)
 }
 @media screen and (min-width: 800px){
   .one-half{
