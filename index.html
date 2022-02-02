@@ -29,9 +29,8 @@
           <div class="username" id="nameOfUser">no name</div>
         </div>
       </div>
-      <div id="pageLoadAnim" class="loader">
-      </div>
-      <article id="pageContent" class="post h-entry displaynone" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <article id="pageContent" class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
           <h1 id="title" class="post-title p-name" itemprop="name headline">
             <span id="htmlTitle" onclick="this.contentEditable = 'true';" contenteditable="true">Priyanka Banerjee</span>
@@ -120,10 +119,6 @@
 
           document.getElementById('htmlBody').innerHTML += thisCode;
           });
-  
-       // Stop showing loader and show content
-          document.getElementById("pageLoadAnim").style.display = 'none';
-          document.getElementById("pageContent").classList.remove('displaynone');
   
         });
 
