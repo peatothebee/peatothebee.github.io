@@ -53,11 +53,12 @@
       <article id="pageContent" class="post h-entry displaynone" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
           <h1 id="title" class="post-title p-name" itemprop="name headline">
-            <span id="htmlTitle" onclick="this.contentEditable = 'true';" contenteditable="true">Loading...</span>
+            <span id="htmlTitle" onclick="this.contentEditable = 'true';" contenteditable="true">Priyanka Banerjee</span>
           </h1>
-          <div id="htmlSubtitle" onclick="this.contentEditable = 'true';" contenteditable="true" class="sub-title">It should work if you give it a second.</div>
+          <div id="htmlSubtitle" onclick="this.contentEditable = 'true';" contenteditable="true" class="sub-title">Hello! My name is Priyanka. I am a Strategy and Operations Lead at Google, and also a chilli oil enthusiast.
+            <p>I write about personal finance, cats and Formula one.</div>
         </header>
-        <div id="htmlBody" class="post-content e-content" itemprop="articleBody">
+        <div id="htmlBody" class="post-content e-content" itemprop="articleBody"> default
         </div>
       </article>
       
@@ -107,6 +108,8 @@
           var posts = snapshot.val();
           numposts = posts.length;
 
+          console.log("There are " + numposts + "posts" );
+
           for (var i = posts.length - 1; i > -1; i--) {
 
           var thisCode = "<a href='post.html?" +
@@ -127,7 +130,6 @@
        // Stop showing loader and show content
           document.getElementById("pageLoadAnim").style.display = 'none';
           document.getElementById("pageContent").classList.remove('displaynone');
-          
   
         });
   
