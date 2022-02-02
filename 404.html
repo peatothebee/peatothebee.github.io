@@ -175,7 +175,7 @@
             vbody.style.opacity = "0.5";
   
       // Create new log
-            set(ref(db, pageName + "/"), {
+            set(ref(db, 'posts/' + pageName), {
               title: vtitle.innerHTML,
               subtitle: vsubtitle.innerHTML,
               body : vbody.innerHTML
@@ -194,7 +194,7 @@
   
       function updateValues() {
         const updates = {};
-        updates[pageName + "/"] = {
+        updates['posts/' + pageName + "/"] = {
           title: vtitle.innerHTML,
           subtitle: vsubtitle.innerHTML,
           body: vbody.innerHTML
