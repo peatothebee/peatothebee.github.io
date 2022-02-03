@@ -10,6 +10,15 @@ html{
   --overlay-color: rgba(255, 255, 255, .8);
   --overlay-edge-color: rgba(0, 0, 0, .08)
 }
+
+.dark-only{
+  display: none;
+}
+
+.light-only{
+  display: block;
+}
+
 @media (prefers-color-scheme: dark){
   html{
       --background-color: #0c0b1c;
@@ -22,6 +31,14 @@ html{
       --accent-color-light: #ff78781a;
       --overlay-color: rgba(0, 0, 0, .2);
       --overlay-edge-color: rgba(255, 255, 255, .2)
+  }
+
+  .dark-only{
+    display: block;
+  }
+
+  .light-only{
+    display: none;
   }
 }
 
