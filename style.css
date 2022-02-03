@@ -12,11 +12,7 @@ html{
 }
 
 .dark-only{
-  display: none;
-}
-
-.light-only{
-  display: block;
+  display: none !important;
 }
 
 @media (prefers-color-scheme: dark){
@@ -33,12 +29,8 @@ html{
       --overlay-edge-color: rgba(255, 255, 255, .2)
   }
 
-  .dark-only{
-    display: block;
-  }
-
   .light-only{
-    display: none;
+    display: none !important;
   }
 }
 
