@@ -29,6 +29,10 @@ html{
       --overlay-edge-color: rgba(255, 255, 255, .2)
   }
 
+  .dark-only{
+    display: block !important;
+  }
+
   .light-only{
     display: none !important;
   }
