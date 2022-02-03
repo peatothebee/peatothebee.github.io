@@ -30,11 +30,33 @@ html{
   }
 
   .dark-only{
-    display: block;
+      display: block;
   }
+
 
   .light-only{
     display: none !important;
+  }
+}
+
+
+.mobile-only{
+  display:none
+}
+@media screen and (max-width: 600px){
+
+  .mobile-only{
+      display:flex
+  }
+
+  @media (prefers-color-scheme: light){
+    .dark-only{
+      display: none;
+  }
+  }
+
+  .desktop-only{
+      display:none
   }
 }
 
@@ -517,17 +539,7 @@ h5 a:hover{
   z-index: -1;
 }
 
-.mobile-only{
-  display:none
-}
-@media screen and (max-width: 600px){
-  .mobile-only{
-      display:flex
-  }
-  .desktop-only{
-      display:none
-  }
-}
+
 .site-header{
   position:fixed;
   right:0;
