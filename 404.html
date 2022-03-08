@@ -178,10 +178,12 @@
           }
   
        // Stop showing loader and show content
-          vbody.contentEditable = "false";
           document.getElementById("pageContent").classList.remove('displaynone');
         });
   
+      // Dont't allow editing of post body
+      vbody.contentEditable = "false";
+
         // check if logged in
         hideActionBar();
         getUserDetails();
@@ -222,7 +224,7 @@
         // Hide login button
         vlogin.classList.add('displaynone');
 
-        if (vemail == "pbanerjee25@gmail.com"){
+        if (vemail == "pbanerjee25@gmail.com" || vemail == "gyanlakhwani@gmail.com"){
           //User can edit, show edit access
           document.getElementById('statusOfUser').innerHTML = "Edit Access";
           
